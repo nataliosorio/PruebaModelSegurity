@@ -49,9 +49,15 @@ namespace Entity.Context
 
         public DbSet<User> Usuarios { get; set; }
         public DbSet<RolUser> UsuarioRoles { get; set; }
+        public DbSet<Paciente> Paciente { get; set; }
+        public DbSet<Doctor> Doctor { get; set; }
+
+        public DbSet<Cita> Cita { get; set; }
 
 
-      
+
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.EnableSensitiveDataLogging();

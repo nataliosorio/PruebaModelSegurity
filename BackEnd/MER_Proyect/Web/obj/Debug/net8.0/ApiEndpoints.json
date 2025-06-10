@@ -48,6 +48,236 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Web.Controllers.CitaController",
+    "Method": "GetAll",
+    "RelativePath": "api/Cita",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Entity.DTOs.CitaDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Web.Controllers.CitaController",
+    "Method": "Create",
+    "RelativePath": "api/Cita",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Entity.DTOs.CitaCreate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.CitaController",
+    "Method": "GetById",
+    "RelativePath": "api/Cita/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.CitaController",
+    "Method": "Update",
+    "RelativePath": "api/Cita/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Entity.DTOs.CitaCreate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.CitaController",
+    "Method": "Delete",
+    "RelativePath": "api/Cita/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.CitaController",
+    "Method": "DeleteLogic",
+    "RelativePath": "api/Cita/DeleteLogic/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.CitaController",
+    "Method": "RecoverLogic",
+    "RelativePath": "api/Cita/restore/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.GenericController\u00601[[Entity.DTOs.DoctorDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAll",
+    "RelativePath": "api/Doctor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.GenericController\u00601[[Entity.DTOs.DoctorDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Create",
+    "RelativePath": "api/Doctor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Entity.DTOs.DoctorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.GenericController\u00601[[Entity.DTOs.DoctorDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/Doctor/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.GenericController\u00601[[Entity.DTOs.DoctorDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/Doctor/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Entity.DTOs.DoctorDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.GenericController\u00601[[Entity.DTOs.DoctorDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Doctor/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.GenericController\u00601[[Entity.DTOs.DoctorDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "DeleteLogic",
+    "RelativePath": "api/Doctor/logic/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.GenericController\u00601[[Entity.DTOs.DoctorDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "RecoverLogic",
+    "RelativePath": "api/Doctor/restore/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web.Controllers.GenericController\u00601[[Entity.DTOs.FormDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "GetAll",
     "RelativePath": "api/FormControllerPrueba",
@@ -368,6 +598,117 @@
     "ContainingType": "Web.Controllers.GenericController\u00601[[ModuleDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "RecoverLogic",
     "RelativePath": "api/Module/restore/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.GenericController\u00601[[Entity.DTOs.PacienteDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetAll",
+    "RelativePath": "api/Paciente",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.GenericController\u00601[[Entity.DTOs.PacienteDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Create",
+    "RelativePath": "api/Paciente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Entity.DTOs.PacienteDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.GenericController\u00601[[Entity.DTOs.PacienteDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/Paciente/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.GenericController\u00601[[Entity.DTOs.PacienteDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/Paciente/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Entity.DTOs.PacienteDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.GenericController\u00601[[Entity.DTOs.PacienteDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Paciente/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.GenericController\u00601[[Entity.DTOs.PacienteDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "DeleteLogic",
+    "RelativePath": "api/Paciente/logic/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.GenericController\u00601[[Entity.DTOs.PacienteDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "RecoverLogic",
+    "RelativePath": "api/Paciente/restore/{id}",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,

@@ -2062,8 +2062,8 @@ C:\c-sharp\Model-Segurity-API\BackEnd\MER_Proyect\Web\obj\Debug\net8.0\ref\Web.d
 C:\c-sharp\Model-Segurity-API\BackEnd\MER_Proyect\Web\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
 C:\c-sharp\Model-Segurity-API\BackEnd\MER_Proyect\Web\bin\Debug\net8.0\Microsoft.Extensions.Logging.Debug.dll
 C:\PruebaModelSegurity\BackEnd\MER_Proyect\Web\bin\Debug\net8.0\appsettings.Development.json
-C:\PruebaModelSegurity\BackEnd\MER_Proyect\Web\bin\Debug\net8.0\appsettings.json
 C:\PruebaModelSegurity\BackEnd\MER_Proyect\Web\bin\Debug\net8.0\Web.staticwebassets.endpoints.json
+C:\PruebaModelSegurity\BackEnd\MER_Proyect\Web\bin\Debug\net8.0\appsettings.json
 C:\PruebaModelSegurity\BackEnd\MER_Proyect\Web\bin\Debug\net8.0\Web.exe
 C:\PruebaModelSegurity\BackEnd\MER_Proyect\Web\bin\Debug\net8.0\Web.deps.json
 C:\PruebaModelSegurity\BackEnd\MER_Proyect\Web\bin\Debug\net8.0\Web.runtimeconfig.json

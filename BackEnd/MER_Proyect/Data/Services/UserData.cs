@@ -32,7 +32,7 @@ namespace Data.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al obtener todos los usuarios con información de la persona");
+                _logger.LogError(ex, "Error al obtener todas las citas con información de la persona");
                 throw;
             }
         }
@@ -47,7 +47,7 @@ namespace Data.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al obtener el usuario con ID {Id}", id);
+                _logger.LogError(ex, "Error al obtener las citas con ID {Id}", id);
                 throw;
             }
         }
@@ -62,7 +62,7 @@ namespace Data.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al crear el usuario");
+                _logger.LogError(ex, "Error al crear el la citas ");
                 throw;
             }
         }
@@ -77,7 +77,7 @@ namespace Data.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al actualizar el usuario");
+                _logger.LogError(ex, "Error al actualizar la citas ");
                 return false;
             }
         }
@@ -95,7 +95,7 @@ namespace Data.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al eliminar el usuario");
+                _logger.LogError(ex, "Error al eliminar la citas ");
                 return false;
             }
         }

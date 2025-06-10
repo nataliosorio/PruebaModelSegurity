@@ -17,6 +17,13 @@ namespace Entity.DTOs
             CreateMap<Form, FormDto>();
             CreateMap<FormDto, Form>();
 
+            CreateMap<Paciente, PacienteDto>();
+            CreateMap<PacienteDto, Paciente>();
+
+            CreateMap<Doctor, DoctorDto>();
+            CreateMap<DoctorDto, Doctor>();
+
+
             CreateMap<Module, ModuleDto>();
             CreateMap<ModuleDto, Module>();
 

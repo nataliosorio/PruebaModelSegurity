@@ -33,6 +33,10 @@ namespace Web.Extensions
             services.AddScoped(typeof(IGenericService<PermissionDto>), typeof(GenericService<PermissionDto, Permission>));
             services.AddScoped(typeof(IGenericService<RolFormPermissionDto>), typeof(GenericService<RolFormPermissionDto, RolFormPermission>));
 
+            services.AddScoped(typeof(IGenericService<PacienteDto>), typeof(GenericService<PacienteDto, Paciente>));
+            services.AddScoped(typeof(IGenericService<DoctorDto>), typeof(GenericService<DoctorDto, Doctor>));
+
+
 
             // SERVICIO EXTENDIDO
             services.AddScoped<RolFormPermissionRepository>();
@@ -43,6 +47,10 @@ namespace Web.Extensions
 
             services.AddScoped<RolUserBusiness>();
             services.AddScoped<RolUserData>();
+            services.AddScoped<CitaBusiness>();
+            services.AddScoped<CitaData>();
+
+
             //Automaper
             services.AddAutoMapper(typeof(AutoMapperProfile));
             services.AddTransient<EmailService>();
