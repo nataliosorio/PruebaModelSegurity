@@ -55,3 +55,69 @@ Casos de uso:
 Consultar información sobre la tienda (ubicación, menú, horarios).
 Realizar pedidos para entrega o recogida.
 Elegir y pagar en la moneda preferida.
+```plantuml
+@startuml
+left to right direction
+skinparam actorStyle awesome
+
+actor "Marie - Panadera" as Marie
+actor "Sophie - Cajera" as Sophie
+actor "Antoine - Manager" as Antoine
+actor "Amélie - Clienta fiel" as Amelie
+actor "David - Turista" as David
+
+rectangle "Sistema de Panadería" {
+  usecase "Actualizar inventario" as UC1
+  usecase "Consultar inventario" as UC1b
+  usecase "Escalar recetas" as UC2
+  usecase "Revisar programa de producción" as UC3
+
+  usecase "Registrar pedidos y pagos" as UC4
+  usecase "Aplicar descuentos/recompensas" as UC5
+  usecase "Gestionar pedidos desde app móvil" as UC6
+
+  usecase "Visualizar ventas e inventario" as UC7
+  usecase "Analizar comportamiento del cliente" as UC8
+  usecase "Asignar turnos del personal" as UC9
+
+  usecase "Consultar menú y alérgenos" as UC10
+  usecase "Hacer pedidos en línea" as UC11
+  usecase "Ver y redimir puntos" as UC12
+
+  usecase "Consultar info de la tienda" as UC13
+  usecase "Realizar pedidos y elegir entrega" as UC14
+  usecase "Pagar en moneda preferida" as UC15
+}
+
+Marie --> UC1
+Marie --> UC2
+Marie --> UC3
+UC1 .> UC1b : <<include>>
+
+Sophie --> UC4
+Sophie --> UC5
+Sophie --> UC6
+UC4 .> UC5 : <<extend>>
+
+Antoine --> UC7
+Antoine --> UC8
+Antoine --> UC9
+UC7 .> UC8 : <<include>>
+
+Amelie --> UC10
+Amelie --> UC11
+Amelie --> UC12
+UC11 .> UC12 : <<extend>>
+
+David --> UC13
+David --> UC14
+David --> UC15
+UC14 .> UC15 : <<include>>
+@enduml
+
+```
+
+<img width="500" height="1433" alt="image" src="https://github.com/user-attachments/assets/01db00a6-dee8-4d8e-b4ca-4fed10472b06" />
+
+
+
