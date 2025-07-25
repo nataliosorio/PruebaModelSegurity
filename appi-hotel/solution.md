@@ -299,4 +299,153 @@ UC14 .> UC15 : <<include>>
 <img width="500" height="1433" alt="image" src="https://github.com/user-attachments/assets/01db00a6-dee8-4d8e-b4ca-4fed10472b06" />
 
 
+---
+ERD-MODELO RELACIONAL
+```
+@startuml
+' Title
+title ERD Belle Croissant Lyonnais
+
+entity Cliente {
+  +id_cliente : INT <<PK>>
+  nombre : VARCHAR(100)
+  correo : VARCHAR(100) <<UNIQUE>>
+  telefono : VARCHAR(15)
+  tipo : ENUM('Fiel','Turista')
+}
+
+entity Empleado {
+  +id_empleado : INT <<PK>>
+  nombre : VARCHAR(100)
+  rol : ENUM('Panadera','Cajera','Manager')
+  email : VARCHAR(100) <<UNIQUE>>
+  fecha_ingreso : DATE
+}
+
+entity Producto {
+  +id_producto : INT <<PK>>
+  nombre : VARCHAR(100)
+  descripcion : TEXT
+  precio : DECIMAL(8,2)
+  tipo : ENUM('Dulce','Salado')
+  stock : INT
+}
+
+entity Pedido {
+  +id_pedido : INT <<PK>>
+  fecha : DATETIME
+  estado : ENUM('Pendiente','Entregado','Cancelado')
+  id_cliente : INT <<FK>>
+  id_empleado : INT <<FK>>
+}
+
+entity ItemPedido {
+  +id_item : INT <<PK>>
+  id_pedido : INT <<FK>>
+  id_producto : INT <<FK>>
+  cantidad : INT
+  subtotal : DECIMAL(8,2)
+}
+
+entity Inventario {
+  +id_inventario : INT <<PK>>
+  id_producto : INT <<FK>>
+  cantidad : INT
+  fecha_actualizacion : DATE
+}
+
+entity Horario {
+  +id_horario : INT <<PK>>
+  id_empleado : INT <<FK>>
+  dia : ENUM('Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo')
+  hora_inicio : TIME
+  hora_fin : TIME
+}
+
+entity Fidelidad {
+  +id_fidelidad : INT <<PK>>
+  id_cliente : INT <<FK>>
+  puntos : INT
+  fecha_actualizacion : DATE
+}
+
+entity Pago {
+  +id_pago : INT <<PK>>
+  id_pedido : INT <<FK>>
+  metodo : ENUM('Efectivo','Tarjeta','Móvil','Internacional')
+  monto : DECIMAL(8,2)
+  fecha_pago : DATETIME
+}
+
+Cliente -- Pedido : realiza
+Pedido -- Empleado : registrado_por
+Pedido -- ItemPedido : contiene >
+Producto -- ItemPedido : incluido_en
+Producto -- Inventario : gestiona >
+Empleado -- Horario : tiene >
+Cliente -- Fidelidad : participa >
+Pedido -- Pago : se_paga_con >
+
+@enduml
+
+```
+
+---
+
+<img width="1253" height="815" alt="image" src="https://github.com/user-attachments/assets/f73b60df-babd-4653-8fc8-1f59d6844da1" />
+
+
+
+---
+<img width="1505" height="737" alt="image" src="https://github.com/user-attachments/assets/b89ebe0d-9ee8-4fc0-8ee2-4cc2ee6bf00c" />
+
+
+---
+
+<img width="1024" height="1024" alt="Copilot_20250725_050719" src="https://github.com/user-attachments/assets/7e147921-4528-4895-8db3-e0895f86e445" />
+
+
+----
+
+hacer diagrama en microsft visio: 
+
+📊 Tabla con entidades, atributos y relaciones
+Aquí tienes una estructura clara que puedes copiar en Visio usando rectángulos, óvalos y rombos según la notación Chen:
+
+🧱 Entidades y atributos
+Entidad	Atributos
+Cliente	🟠 ID_Cliente (PK), Nombre, Email
+Producto	🟠 ID_Producto (PK), Nombre, Precio
+Pedido	🟠 ID_Pedido (PK), Fecha, Total
+Empleado	🟠 ID_Empleado (PK), Nombre, Cargo
+Fidelidad	🟠 ID_Fidelidad (PK), Nivel, Descuento
+
+
+🔗 Relaciones
+Relación	Entidades involucradas	Cardinalidades	Atributos de relación (opcional)
+Realiza  	Cliente —   Pedido	Cliente (1) ↔ Pedido (n)	
+Contiene	Pedido —   Producto	Pedido (1) ↔ Producto (n)	  Cantidad
+Registra	Empleado — Pedido	Empleado (1) ↔ Pedido (n)	
+Participa	Cliente — Fidelidad	Cliente (1) ↔ Fidelidad (0..1)	  Fecha_inicio, Fecha_fin
+
+
+🎨 ¿Cómo replicarlo en Visio?
+Dibuja rectángulos para cada entidad, con su nombre y atributos dentro.
+
+Agrega óvalos unidos por líneas para mostrar cada atributo si deseas más detalle visual.
+
+Inserta rombos para relaciones, con líneas que conectan a las entidades.
+
+Coloca cardinalidades cerca de las líneas (por ejemplo, 1, n, 0..1).
+
+Usa colores o negritas para destacar claves primarias (PK) y foráneas (FK).
+
+ejemplo: 
+
+<img width="1536" height="1024" alt="Copilot_20250725_051857" src="https://github.com/user-attachments/assets/2d5598bb-e5b4-405e-bf9d-498053bf46e6" />
+
+
+
+
+
 
