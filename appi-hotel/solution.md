@@ -445,6 +445,60 @@ ejemplo:
 <img width="1536" height="1024" alt="Copilot_20250725_051857" src="https://github.com/user-attachments/assets/2d5598bb-e5b4-405e-bf9d-498053bf46e6" />
 
 
+---
+
+solucion de diagrama erd que piden en el 4.1: 
+🧩 Entidades principales
+Usuario
+UsuarioID (PK)
+
+Email
+
+Contraseña (almacenada como hash)
+
+Nombre
+
+Apellido
+
+Telefono
+
+SuscripcionCorreo (booleano)
+
+ImagenPerfil
+
+MetodoEntregaPreferido
+
+PreguntaSeguridad
+
+RespuestaSeguridad (hash)
+
+DireccionEntrega
+DireccionID (PK)
+
+UsuarioID (FK)
+
+TipoDireccion (e.g. Domicilio, Trabajo)
+
+DireccionCompleta
+
+Ciudad
+
+CodigoPostal
+
+Pais
+
+EsPreferida (booleano)
+
+relaciones: 
+
+Entidad Principal	Relación	Entidad Relacionada
+Usuario	1:N	DireccionEntrega
+Un usuario puede tener varias direcciones, pero cada dirección pertenece a un único usuario.
+
+El campo EsPreferida permite indicar cuál de las direcciones es la predilecta para entregas.
+
+Se puede ampliar el sistema para incluir direcciones de facturación o puntos de recogida específicos.
+
 
 
 
